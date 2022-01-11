@@ -96,79 +96,79 @@ nav:
     - '最小表示法': 'String/最小表示法.md'
     - 'Lyndon分解': 'String/Lyndon分解.md'
     - '后缀树': 'String/后缀树.md'
-  - '数学'
+  - '数学':
     - '数论':
-      - '埃式筛':
-      - 'gcd/lcm':
-      - '快速幂':
-      - '逆元':
-      - '扩展欧几里得':
-      - '费马定理':
-      - '扩展欧拉定理':
-      - '原根':
-      - '类欧几里得':
-      - '同余方程组':
-      - 'Lucas':
-      - '离散对数':
-      - '数论函数':
-        - '线性筛':
-        - '整除分块':
-        - '迪利克雷卷积':
-        - '莫比乌斯函数':
-        - '杜教筛':
-        - 'min25筛':
-      - 'Miller Rabin':
-      - 'Pollard Rho':
-      - '佩尔方程':
-      - '单位根反演':
-      - '二次剩余':
+      - '埃氏筛': 'Math/埃氏筛.md'
+      - 'gcd/lcm': 'Math/gcd.md'
+      - '快速幂': 'Math/快速幂.md'
+      - '逆元': 'Math/逆元.md'  
+      - '扩展欧几里得': 'Math/扩展欧几里得.md'
+      - '费马定理': 'Math/费马定理.md' 
+      - '扩展欧拉定理': 'Math/扩展欧拉定理.md'
+      - '原根': 'Math/原根.md'
+      - '类欧几里得': 'Math/类欧几里得.md'
+      - '同余方程组': 'Math/同余方程组.md'
+      - 'Lucas': 'Math/Lucas.md'
+      - '离散对数': 'Math/离散对数.md' 
+      - '数论函数': 
+        - '线性筛': 'Math/线性筛.md'
+        - '整除分块': 'Math/整除分块.md'
+        - '迪利克雷卷积': 'Math/迪利克雷卷积.md'
+        - '莫比乌斯函数': 'Math/莫比乌斯函数.md'
+        - '杜教筛': 'Math/杜教筛.md' 
+        - 'min25筛': 'Math/min25筛.md'
+      - 'Miller Rabin': 'Math/Miller Rabin.md'
+      - 'Pollard Rho': 'Math/Pollard Rho.md'
+      - '佩尔方程': 'Math/佩尔方程.md'
+      - '单位根反演': 'Math/单位根反演.md'
+      - '二次剩余': 'Math/二次剩余.md'
     - '线性代数':
-      - '矩阵快速幂':
-      - '高斯消元':
-      - '行列式':
-      - '线性基':
-      - '矩阵求逆':
-      - '常系数线性递推':
-      - '矩阵树定理':
-      - 'BM':
-      - 'BEST定理':
-      - '特征值,特征向量'
+      - '矩阵快速幂': 'Linear Algebra/矩阵快速幂.md'
+      - '高斯消元': 'Linear Algebra/高斯消元.md'
+      - '行列式': 'Linear Algebra/行列式.md'
+      - '线性基': 'Linear Algebra/线性基.md'
+      - '矩阵求逆': 'Linear Algebra/矩阵求逆.md'
+      - '常系数线性递推': 'Linear Algebra/常系数线性递推.md' 
+      - '矩阵树定理': 'Linear Algebra/矩阵树定理.md'
+      - 'BM': 'Linear Algebra/BM.md'
+      - 'BEST定理': 'Linear Algebra/BEST定理.md'
+      - '特征值,特征向量': 'Linear Algebra/特征值.md'
     - '组合数学':
-      - '组合数':
-      - '二项式定理':
-      - '概率论':
+      - '组合数': 'Combinatorics/组合数.md'
+      - '二项式定理': 'Combinatorics/二项式定理.md'
+      - '概率论': 'Combinatorics/概率论.md'
       - '容斥定理':
-        - '基础':
-        - 'min-max容斥':
-        - '二项式反演':
+        - '基础': 'Combinatorics/容斥定理基础.md'
+        - 'min-max容斥': 'Combinatorics/min-max容斥.md'
+        - '二项式反演': 'Combinatorics/二项式反演.md'
       - '常见数列':
-        - '斐波拉契数列':
-        - '错排问题':
-        - '卡特兰数':
-        - '拆分数':
-        - '斯特林数':
-        - '贝尔数':
-        - '伯努利数':
-      - 'purfer序列':
-      - 'LGV引理':
-      - '杨表':
+        - '斐波拉契数列': 'Combinatorics/斐波拉契数列.md'
+        - '错排问题': 'Combinatorics/错排问题.md'
+        - '卡特兰数': 'Combinatorics/卡特兰数.md'
+        - '拆分数': 'Combinatorics/拆分数.md'
+        - '斯特林数': 'Combinatorics/斯特林数.md'
+        - '贝尔数': 'Combinatorics/贝尔数.md' 
+        - '伯努利数': 'Combinatorics/伯努利数.md'
+      - 'purfer序列': 'Combinatorics/purfer序列.md'
+      - 'LGV引理': 'Combinatorics/LGV引理.md'
+      - '杨表': 'Combinatorics/杨表.md'
     - '博弈论':
-      - 'SG函数':
-      - '常见结论':
-      - '不平等博弈':
+      - 'SG函数': 'Game/SG函数.md'
+      - '常见结论': 'Game/常见结论.md'
+      - '不平等博弈': 'Game/不平等博弈.md'
     - '多项式':
-      - 'FFT/NTT':
-      - '拉格朗日插值':
-      - '生成函数':
-      - '多项式全家桶':
-      - '集合幂级数':
-    - '群论':
-      - '置换':
-      - 'Burnside引理':
-      - 'Polya定理':
-    - '线性规划':
+      - 'FFT/NTT': 'Polynomial/FFT.md'
+      - '拉格朗日插值': 'Polynomial/拉格朗日插值.md'
+      - '生成函数': 'Polynomial/生成函数.md'
+      - '多项式全家桶': 'Polynomial/多项式全家桶.md'
+      - '集合幂级数': 'Polynomial/集合幂级数.md'
+    - '群论': 
+      - '置换': 'Group/置换.md'
+      - 'Burnside引理': 'Group/Burnside引理.md'
+      - 'Polya定理': 'Group/Polya定理.md'
+    - '线性规划': 'Linear Programming/线性规划.md'
 
-    
+
 # Theme information
 theme:
   name: material
