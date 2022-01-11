@@ -1,0 +1,201 @@
+# Project Information
+site_name: Cuit-Wiki
+site_author: CUIT ACM Team
+site_url: https://cuit-wiki.crotes.top/
+strict: false
+
+# Repository
+repo_name: 'Crotes/Cuit-Wiki'
+repo_url: 'https://github.com/Crotes/Cuit-Wiki'
+remote_branch: main
+
+# Contents
+nav:
+  - '简介': 'index.md'
+  - '数据结构': 
+    - '队列': 'datastructure/队列.md'
+    - '栈': 'datastructure/栈.md'
+    - '链表': 'datastructure/链表.md'
+    - '堆': 'datastructure/堆.md'
+    - '树':
+      - '树的基础': 'datastructure/树的基础.md'
+      - '线段树': 'datastructure/线段树.md'
+      - '树状数组': 'datastructure/树状数组.md'
+      - '平衡树': 'datastructure/平衡树.md'
+      - '树套树': 'datastructure/树套树.md'
+      - '树链剖分': 'datastructure/树链剖分.md'
+      - '笛卡尔树': 'datastructure/笛卡尔树.md'
+      - '树的启发式合并': 'datastructure/树的启发式合并.md'
+      - 'DSU': 'datastructure/DSU.md'
+      - 'LCT': 'datastructure/LCT.md'
+      - '虚树': 'datastructure/虚树.md'
+      - 'KD树': 'datastructure/KD树.md'
+      - '树的哈希': 'datastructure/树的哈希.md'
+    - '并查集': 'datastructure/并查集.md'
+    - '分块': 'datastructure/分块.md'
+    - 'STL': 
+      - 'pair': 'datastructure/pair.md' 
+      - 'vector': 'datastructure/vector.md'
+      - 'priority_queue': 'datastructure/priority_queue.md'
+      - 'set': 'datastructure/set.md'
+      - 'map': 'datastructure/map.md'
+      - 'multiset': 'datastructure/multiset.md'
+      - 'bitset': 'datastructure/bitset.md'
+      - 'pbds': 'datastructure/pbds.md'
+    - 'RMQ': 'datastructure/RMQ.md'
+  - '图论': 
+    - '图的概念': 'Graph/图的概念.md'
+    - '图的遍历': 'Graph/图的遍历.md'
+    - '拓扑序': 'Graph/拓扑序.md'
+    - '传递闭包': 'Graph/传递闭包.md'
+    - '最短路': 'Graph/最短路.md'
+    - '最小生成树': 'Graph/最小生成树.md'
+    - '点(边)双连通分量': 'Graph/点(边)双连通分量.md'
+    - '二分图':
+      - '二分图判定': 'Graph/二分图判定.md'
+      - '匈牙利算法': 'Graph/匈牙利算法.md'
+      - 'KM': 'Graph/KM.md'
+      - 'hopcraft-karp': 'Graph/hopcraft-karp.md'
+    - '网络流':
+      - '最大流': 'Graph/最大流.md'
+      - '费用流': 'Graph/费用流.md'
+      - '上下界网络流': 'Graph/上下界网络流.md'
+    - '欧拉路': 'Graph/欧拉路.md'
+    - '2-sat': 'Graph/2-sat.md'
+    - '竞赛图': 'Graph/竞赛图.md'
+    - '差分约束': 'Graph/差分约束.md'
+    - '斯坦纳树': 'Graph/斯坦纳树.md'
+    - '仙人掌': 'Graph/仙人掌.md'
+    - '最小树形图': 'Graph/最小树形图.md'
+    - '一般图匹配': 'Graph/一般图匹配.md'
+    - 'K短路': 'Graph/K短路.md'
+    - '支配树': 'Graph/支配树.md'
+    - '全局最小割': 'Graph/全局最小割.md'
+    - '弦图': 'Graph/弦图.md'
+  - '动态规划': 
+    - '动态规划基础': 'dp/动态规划基础.md'
+    - '背包问题': 'dp/背包问题.md'
+    - '区间dp': 'dp/区间dp.md'
+    - '数位dp': 'dp/数位dp.md'
+    - '树形dp': 'dp/树形dp.md'
+    - '状压dp': 'dp/状压dp.md'
+    - '概率dp': 'dp/概率dp.md'
+    - '计数dp': 'dp/计数dp.md'
+    - '其他dp': 'dp/其他dp.md'
+    - 'dp优化': 'dp/dp优化.md'
+  - '字符串':
+    - 'kmp': 'String/kmp.md'
+    - '字符串的hash': 'String/字符串的hash.md'
+    - '字典树': 'String/字典树.md'
+    - 'AC自动机': 'String/AC自动机.md'
+    - '后缀数组': 'String/后缀数组.md'
+    - '后缀自动机': 'String/后缀自动机.md'
+    - '回文自动机': 'String/回文自动机.md'
+    - '扩展kmp': 'String/扩展kmp.md'
+    - 'manacher': 'String/manacher.md'
+    - '最小表示法': 'String/最小表示法.md'
+    - 'Lyndon分解': 'String/Lyndon分解.md'
+    - '后缀树': 'String/后缀树.md'
+  - '数学'
+    - '数论':
+      - '埃式筛':
+      - 'gcd/lcm':
+      - '快速幂':
+      - '逆元':
+      - '扩展欧几里得':
+      - '费马定理':
+      - '扩展欧拉定理':
+      - '原根':
+      - '类欧几里得':
+      - '同余方程组':
+      - 'Lucas':
+      - '离散对数':
+      - '数论函数':
+        - '线性筛':
+        - '整除分块':
+        - '迪利克雷卷积':
+        - '莫比乌斯函数':
+        - '杜教筛':
+        - 'min25筛':
+      - 'Miller Rabin':
+      - 'Pollard Rho':
+      - '佩尔方程':
+      - '单位根反演':
+      - '二次剩余':
+    - '线性代数':
+      - '矩阵快速幂':
+      - '高斯消元':
+      - '行列式':
+      - '线性基':
+      - '矩阵求逆':
+      - '常系数线性递推':
+      - '矩阵树定理':
+      - 'BM':
+      - 'BEST定理':
+      - '特征值,特征向量'
+    - '组合数学':
+      - '组合数':
+      - '二项式定理':
+      - '概率论':
+      - '容斥定理':
+        - '基础':
+        - 'min-max容斥':
+        - '二项式反演':
+      - '常见数列':
+        - '斐波拉契数列':
+        - '错排问题':
+        - '卡特兰数':
+        - '拆分数':
+        - '斯特林数':
+        - '贝尔数':
+        - '伯努利数':
+      - 'purfer序列':
+      - 'LGV引理':
+      - '杨表':
+    - '博弈论':
+      - 'SG函数':
+      - '常见结论':
+      - '不平等博弈':
+    - '多项式':
+      - 'FFT/NTT':
+      - '拉格朗日插值':
+      - '生成函数':
+      - '多项式全家桶':
+      - '集合幂级数':
+    - '群论':
+      - '置换':
+      - 'Burnside引理':
+      - 'Polya定理':
+    - '线性规划':
+
+    
+# Theme information
+theme:
+  name: material
+
+# Extensions
+markdown_extensions:
+  - admonition
+  - codehilite:
+      guess_lang: false
+      linenums: false
+  - toc:
+      permalink: true
+  - footnotes
+  - meta
+  - def_list
+  - pymdownx.arithmatex
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.critic
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_generator: !!python/name:pymdownx.emoji.to_png
+  - pymdownx.inlinehilite
+  - pymdownx.magiclink
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.superfences
+  - pymdownx.tasklist
+  - pymdownx.tilde
