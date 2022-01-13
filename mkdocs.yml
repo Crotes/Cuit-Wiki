@@ -173,7 +173,7 @@ nav:
 theme:
   name: material
   highlightjs: true
-  language: 'zh_CN'
+  language: 'zh'
 
 # Extensions
 markdown_extensions:
@@ -208,4 +208,4 @@ markdown_extensions:
 # Extra
 extra_javascript:
   - https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML
-  - extra/js/mathjaxhelper.js
+  - Extra/JS/mathjaxhelper.js
