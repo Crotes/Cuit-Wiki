@@ -184,7 +184,7 @@ markdown_extensions:
   - toc:
       permalink: true
   - footnotes
-  - fencend_code
+  - fenced_code
   - meta
   - def_list
   - extra
