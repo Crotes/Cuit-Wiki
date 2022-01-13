@@ -8,7 +8,6 @@ strict: false
 repo_name: 'Crotes/Cuit-Wiki'
 repo_url: 'https://github.com/Crotes/Cuit-Wiki'
 edit_uri: 'https://github.com/Crotes/Cuit-Wiki/edit/main/docs/'
-# remote_branch: main
 
 # Contents
 nav:
@@ -173,6 +172,8 @@ nav:
 # Theme information
 theme:
   name: material
+  highlightjs: true
+  language: 'zh_CN'
 
 # Extensions
 markdown_extensions:
@@ -183,8 +184,10 @@ markdown_extensions:
   - toc:
       permalink: true
   - footnotes
+  - fencend_code
   - meta
   - def_list
+  - extra
   - pymdownx.arithmatex
   - pymdownx.betterem:
       smart_enable: all
@@ -200,3 +203,9 @@ markdown_extensions:
   - pymdownx.superfences
   - pymdownx.tasklist
   - pymdownx.tilde
+  - tables
+
+# Extra
+extra_javascript:
+  - https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML
+  - extra/js/mathjaxhelper.js
