@@ -27,7 +27,9 @@ long long Lucas(long long n, long long m, long long p)
 ## exLucas
 
 适用条件：$n,m$较大，$p$不为素数
+
 https://www.cnblogs.com/fzl194/p/9095177.html
+
 时间复杂度：$O(plog p)$
 
 ```c++
