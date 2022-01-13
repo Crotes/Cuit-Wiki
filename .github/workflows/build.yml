@@ -1,0 +1,37 @@
+name: build
+
+on:
+  push:
+    branches: 
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    name: Page Build
+    runs-on: ubuntu-latest
+    steps:
+      - name: 检查分支
+        uses: actions/checkout@v2
+
+      - name: 安装Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.x'
+
+      - name: 安装Node
+        uses: actions/setup-node@v2
+        with:
+          node-version: '12'
+          check-latest: true
+
+      - name: 安装Node依赖
+        run: npm install .
+      
+      - name: 安装Mkdocs
+        run: pip install mkdocs-material
+        
+      - name: 构建页面
+        run: mkdocs build -v
