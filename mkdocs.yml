@@ -8,7 +8,7 @@ strict: false
 repo_name: 'Crotes/Cuit-Wiki'
 repo_url: 'https://github.com/Crotes/Cuit-Wiki'
 edit_uri: 'https://github.com/Crotes/Cuit-Wiki/edit/main/docs/'
-remote_branch: main
+# remote_branch: main
 
 # Contents
 nav:
