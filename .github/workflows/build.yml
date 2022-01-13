@@ -27,11 +27,6 @@ jobs:
           node-version: '12'
           check-latest: true
 
-      - uses: actions/cache@v2
-          with:
-            key: ${{ github.ref }}
-            path: .cache
-            
       - name: 安装Node依赖
         run: npm install .
       
