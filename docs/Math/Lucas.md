@@ -9,17 +9,20 @@ p小，逆元打表，O(n+p+logp n)
 p大，exgcd求逆元,O(n+ln p*logp n)
 //n为处理阶乘，ln p*logp n为单次查询
 */
+```
 long long Lucas(long long n, long long m, long long p)
 {
     if (m == 0) return 1;
     return (C(n % p, m % p, p) * Lucas(n / p, m / p, p)) % p;
 }
+```
 /*
 exLucas
 适用条件：n,m较大，p不为素数
 https://www.cnblogs.com/fzl194/p/9095177.html
 时间复杂度：O(plog p)
 */
+```
 ll qpow(ll base,ll exponent,ll mod)
 {
     ll result=1;
@@ -104,3 +107,4 @@ ll exlucas(ll n,ll m,ll MOD)
     if(tmp>1) mod.push_back(tmp),a.push_back(lucas(n,m,tmp,tmp));
     return CRT(a,mod);
 }
+```
