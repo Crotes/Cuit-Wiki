@@ -1,13 +1,21 @@
 ## Lucas定理
 
 适用条件：n,m较大，p为素数
+
 公式：$C(n,m)\%p = C(n/p,m/p)*C(n\%p,m\%p)\%p$
+
 时间复杂度：$O(f(x)+g(n)log_pn)$
+
 $f(x)$为预处理组合数的复杂度，g(n)为单次求组合数的复杂度
+
 $p$小，逆元打表，$O(n+p+log_p n)$
+
 //$n$为处理阶乘，$p$为打表，$log_p n$为单次查询
+
 $p$大，$exgcd$求逆元,$O(n+ln p*log_p n)$
+
 //n为处理阶乘，$ln p*log_p n$为单次查询
+
 
 ```c++
 long long Lucas(long long n, long long m, long long p)
