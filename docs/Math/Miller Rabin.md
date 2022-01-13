@@ -7,6 +7,7 @@ https://zhuanlan.zhihu.com/p/220203643
 时间复杂度O(klog n)
 但因为我们使用了固定的一组数，所以 k=7
 */
+```
 typedef unsigned long long ll;
 ll qpow(ll a, ll n, ll p) // 快速幂
 {
@@ -53,3 +54,4 @@ bool Miller_Rabin(ll x)
     }
     return true;
 }
+```
