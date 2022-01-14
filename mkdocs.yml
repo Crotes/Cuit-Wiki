@@ -253,15 +253,15 @@ theme:
   name: material
   palette:
     - scheme: default
-      primary: white
+      primary: indigo
       toggle:
         icon: material/toggle-switch-off-outline
-        name: Switch to dark mode
+        name: 更换到夜间模式
     - scheme: slate 
       primary: deep purple
       toggle:
         icon: material/toggle-switch
-        name: Switch to light mode
+        name: 更换到日间模式
   highlightjs: true
   language: 'zh'
   features:
