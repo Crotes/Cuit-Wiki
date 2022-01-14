@@ -12,6 +12,30 @@ edit_uri: 'https://github.com/Crotes/Cuit-Wiki/edit/main/docs/'
 # Contents
 nav:
   - '简介': 'index.md'
+  - '基础':
+    - '语法基础': 
+      - '函数': 'Base/函数.md'
+      - '指针': 'Base/指针.md'
+      - '引用': 'Base/引用.md'
+      - '结构体': 'Base/结构体.md'
+    - '算法基础':
+      - '递归回溯': 'Base/递归回溯.md'
+      - '递推': 'Base/递推.md'
+      - '贪心': 'Base/贪心.md'
+      - '二分': 'Base/二分.md'
+      - '排序':
+        - '选择排序': 'Base/选择排序.md'
+        - '冒泡排序': 'Base/冒泡排序.md'
+        - '插入排序': 'Base/插入排序.md'
+        - '快速排序': 'Base/快速排序.md'
+        - '归并排序': 'Base/归并排序.md'
+        - '桶排序': 'Base/桶排序.md'
+        - '计数排序': 'Base/计数排序.md' 
+        - '堆排序': 'Base/堆排序.md'
+        - '希尔排序': 'Base/希尔排序.md'
+      - '高精度': 'Base/高精度.md'
+      - '位运算': 'Base/位运算.md'
+      - '时空复杂度分析': 'Base/时空复杂度分析.md'
   - '数据结构': 
     - '队列': 'datastructure/队列.md'
     - '栈': 'datastructure/栈.md'
@@ -167,7 +191,59 @@ nav:
       - 'Burnside引理': 'Group/Burnside引理.md'
       - 'Polya定理': 'Group/Polya定理.md'
     - '线性规划': 'Linear Programming/线性规划.md'
-
+  - '几何':
+    - '点类': 
+      - '点积': 'Geometry/点积.md'
+      - '叉积': 'Geometry/叉积.md'
+      - '极角序': 'Geometry/极角序.md'
+    - '线段相关':
+      - '相交判定': 'Geometry/相关判定.md'
+      - '交点': 'Geometry/交点.md'
+    - '多边形相关':
+      - '凸包': 'Geometry/凸包.md'
+      - '多边形包含': 'Geometry/多边形包含.md'
+      - '旋转卡壳': 'Geometry/旋转卡壳.md'
+      - '半平面相交': 'Geometry/半平面相交.md'
+    - '圆相关':
+      - '交点切线': 'Geometry/交点切线.md'
+      - '面积交/并': 'Geometry/面积交.md'
+    - '凸包快速操作': 'Geometry/凸包快速操作.md'
+    - '三维计算几何': 'Geometry/三维计算几何.md'
+    - '数值积分': 
+      - '辛普森积分': 'Geometry/辛普森积分.md'
+      - '自适应辛普森': 'Geometry/自适应辛普森.md'
+    - '点定位': 'Geometry/点定位.md'
+    - '最小圆覆盖': 'Geometry/最小圆覆盖.md'
+    - 'Voronoi图': 'Geometry/Voronoi图.md'
+    - '圆反演': 'Geometry/圆反演.md'
+    - 'Picks定理': 'Geometry/Picks定理.md'
+  - '其他':
+    - '离散': 'Others/离散.md'
+    - '前缀和/差分': 'Others/前缀和差分.md'
+    - '逆序对': 'Others/逆序对.md'
+    - '扫描线': 'Others/扫描线.md'
+    - '双指针': 'Others/双指针.md'
+    - '倍增': 'Others/倍增.md'
+    - '三分': 'Others/三分.md'
+    - '枚举子集超集': 'Others/枚举子集超集.md'
+    - '搜索': 
+      - '剪枝': 'Others/剪枝.md'
+      - '折半搜索': 'Others/折半搜索.md'
+      - 'DLX': 'Others/DLX.md'
+      - 'AStar': 'Others/AStar.md'
+    - '分治':
+      - '树上分治': 
+        - '点分治': 'Others/点分治.md'
+        - '边分治': 'Others/边分治.md'
+        - '动态点分治': 'Others/动态点分治.md'
+      - 'CDP分治': 'Others/CDP分治.md'
+    - '随机':
+      - '爬山': 'Others/爬山.md'
+      - '模拟退火': 'Others/模拟退火.md'
+      - '遗传': 'Others/遗传.md'
+    - '对拍': 'Others/对拍.md'
+    - '常数优化': 'Others/常数优化.md'
+    - '读入优化': 'Others/读入优化.md'
 
 # Theme information
 theme:
