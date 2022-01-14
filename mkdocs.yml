@@ -15,7 +15,8 @@ copyright: 'Copyright &copy; 2022 - 2022 Cuit Wiki'
 # Contents
 nav:
   - '简介': 'index.md'
-  - '基础':
+  - '基础': 
+    - 'Base/index.md'
     - '语法基础': 
       - '函数': 'Base/函数.md'
       - '指针': 'Base/指针.md'
@@ -40,37 +41,39 @@ nav:
       - '位运算': 'Base/位运算.md'
       - '时空复杂度分析': 'Base/时空复杂度分析.md'
   - '数据结构': 
-    - '队列': 'datastructure/队列.md'
-    - '栈': 'datastructure/栈.md'
-    - '链表': 'datastructure/链表.md'
-    - '堆': 'datastructure/堆.md'
+    - 'Datastructure/index.md'
+    - '队列': 'Datastructure/队列.md'
+    - '栈': 'Datastructure/栈.md'
+    - '链表': 'Datastructure/链表.md'
+    - '堆': 'Datastructure/堆.md'
     - '树':
-      - '树的基础': 'datastructure/树的基础.md'
-      - '线段树': 'datastructure/线段树.md'
-      - '树状数组': 'datastructure/树状数组.md'
-      - '平衡树': 'datastructure/平衡树.md'
-      - '树套树': 'datastructure/树套树.md'
-      - '树链剖分': 'datastructure/树链剖分.md'
-      - '笛卡尔树': 'datastructure/笛卡尔树.md'
-      - '树的启发式合并': 'datastructure/树的启发式合并.md'
-      - 'DSU': 'datastructure/DSU.md'
-      - 'LCT': 'datastructure/LCT.md'
-      - '虚树': 'datastructure/虚树.md'
-      - 'KD树': 'datastructure/KD树.md'
-      - '树的哈希': 'datastructure/树的哈希.md'
-    - '并查集': 'datastructure/并查集.md'
-    - '分块': 'datastructure/分块.md'
+      - '树的基础': 'Datastructure/树的基础.md'
+      - '线段树': 'Datastructure/线段树.md'
+      - '树状数组': 'Datastructure/树状数组.md'
+      - '平衡树': 'Datastructure/平衡树.md'
+      - '树套树': 'Datastructure/树套树.md'
+      - '树链剖分': 'Datastructure/树链剖分.md'
+      - '笛卡尔树': 'Datastructure/笛卡尔树.md'
+      - '树的启发式合并': 'Datastructure/树的启发式合并.md'
+      - 'DSU': 'Datastructure/DSU.md'
+      - 'LCT': 'Datastructure/LCT.md'
+      - '虚树': 'Datastructure/虚树.md'
+      - 'KD树': 'Datastructure/KD树.md'
+      - '树的哈希': 'Datastructure/树的哈希.md'
+    - '并查集': 'Datastructure/并查集.md'
+    - '分块': 'Datastructure/分块.md'
     - 'STL': 
-      - 'pair': 'datastructure/pair.md' 
-      - 'vector': 'datastructure/vector.md'
-      - 'priority_queue': 'datastructure/priority_queue.md'
-      - 'set': 'datastructure/set.md'
-      - 'map': 'datastructure/map.md'
-      - 'multiset': 'datastructure/multiset.md'
-      - 'bitset': 'datastructure/bitset.md'
-      - 'pbds': 'datastructure/pbds.md'
-    - 'RMQ': 'datastructure/RMQ.md'
+      - 'pair': 'Datastructure/pair.md' 
+      - 'vector': 'Datastructure/vector.md'
+      - 'priority_queue': 'Datastructure/priority_queue.md'
+      - 'set': 'Datastructure/set.md'
+      - 'map': 'Datastructure/map.md'
+      - 'multiset': 'Datastructure/multiset.md'
+      - 'bitset': 'Datastructure/bitset.md'
+      - 'pbds': 'Datastructure/pbds.md'
+    - 'RMQ': 'Datastructure/RMQ.md'
   - '图论': 
+    - 'Graph/index.md'
     - '图的概念': 'Graph/图的概念.md'
     - '图的遍历': 'Graph/图的遍历.md'
     - '拓扑序': 'Graph/拓扑序.md'
@@ -100,17 +103,19 @@ nav:
     - '全局最小割': 'Graph/全局最小割.md'
     - '弦图': 'Graph/弦图.md'
   - '动态规划': 
-    - '动态规划基础': 'dp/动态规划基础.md'
-    - '背包问题': 'dp/背包问题.md'
-    - '区间dp': 'dp/区间dp.md'
-    - '数位dp': 'dp/数位dp.md'
-    - '树形dp': 'dp/树形dp.md'
-    - '状压dp': 'dp/状压dp.md'
-    - '概率dp': 'dp/概率dp.md'
-    - '计数dp': 'dp/计数dp.md'
-    - '其他dp': 'dp/其他dp.md'
-    - 'dp优化': 'dp/dp优化.md'
-  - '字符串':
+    - 'Dp/index.md'
+    - '动态规划基础': 'Dp/动态规划基础.md'
+    - '背包问题': 'Dp/背包问题.md'
+    - '区间dp': 'Dp/区间dp.md'
+    - '数位dp': 'Dp/数位dp.md'
+    - '树形dp': 'Dp/树形dp.md'
+    - '状压dp': 'Dp/状压dp.md'
+    - '概率dp': 'Dp/概率dp.md'
+    - '计数dp': 'Dp/计数dp.md'
+    - '其他dp': 'Dp/其他dp.md'
+    - 'dp优化': 'Dp/dp优化.md'
+  - '字符串': 
+    - 'String/index.md'
     - 'kmp': 'String/kmp.md'
     - '字符串的hash': 'String/字符串的hash.md'
     - '字典树': 'String/字典树.md'
@@ -123,7 +128,8 @@ nav:
     - '最小表示法': 'String/最小表示法.md'
     - 'Lyndon分解': 'String/Lyndon分解.md'
     - '后缀树': 'String/后缀树.md'
-  - '数学':
+  - '数学': 
+    - 'Math/index.md'
     - '数论':
       - '埃氏筛': 'Math/埃氏筛.md'
       - 'gcd/lcm': 'Math/gcd.md'
@@ -194,7 +200,8 @@ nav:
       - 'Burnside引理': 'Group/Burnside引理.md'
       - 'Polya定理': 'Group/Polya定理.md'
     - '线性规划': 'Linear Programming/线性规划.md'
-  - '几何':
+  - '几何': 
+    - 'Geometry/index.md'
     - '点类': 
       - '点积': 'Geometry/点积.md'
       - '叉积': 'Geometry/叉积.md'
@@ -220,7 +227,8 @@ nav:
     - 'Voronoi图': 'Geometry/Voronoi图.md'
     - '圆反演': 'Geometry/圆反演.md'
     - 'Picks定理': 'Geometry/Picks定理.md'
-  - '其他':
+  - '其他': 
+    - 'Others/index.md'
     - '离散': 'Others/离散.md'
     - '前缀和/差分': 'Others/前缀和差分.md'
     - '逆序对': 'Others/逆序对.md'
@@ -265,7 +273,7 @@ theme:
   highlightjs: true
   language: 'zh'
   features:
-    - navigation.instant
+    # - navigation.instant
     - navigation.tabs
     - navigation.tabs.sticky
     - navigation.sections
