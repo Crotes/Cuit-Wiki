@@ -1,21 +1,30 @@
-/*
-米勒-拉宾素性检验（Miller–Rabin primality test）:
-https://zhuanlan.zhihu.com/p/220203643
-这是一种概率算法，
-但是，Jim Sinclair发现了一组数：2, 325, 9375, 28178, 450775, 9780504, 1795265022。
-用它们做 a ， 2^64 以内不会出错，我们使用这组数，就不用担心运气太差了。
-时间复杂度O(klog n)
-但因为我们使用了固定的一组数，所以 k=7
-*/
-```
+
+## 米勒-拉宾素性检验
+详细原理见[原博客](https://zhuanlan.zhihu.com/p/220203643)
+
+这是一种概率算法(就是不一定对)
+
+但是，Jim Sinclair发现了一组数：
+
+2, 325, 9375, 28178, 450775, 9780504, 1795265022。
+
+用它们做 a ， 2^64 以内不会出错。
+
+### 时间复杂度
+$O(klog n)$
+
+我们使用了固定的一组数，所以 k=7
+
+```c++
 typedef unsigned long long ll;
-ll qpow(ll a, ll n, ll p) // 快速幂
+ll qpow(ll a, ll n, ll p)
 {
     ll ans = 1;
     while (n)
     {
         if (n & 1)
-            ans = (__int128)ans * a % p; // 注意！中间结果可能溢出，需要使用__int128过渡
+            ans = (__int128)ans * a % p;
+            // 注意！中间结果可能溢出，需要使用__int128过渡
         a = (__int128)a * a % p;
         n >>= 1;
     }
