@@ -1,22 +1,26 @@
 ## Lucas定理
 
-适用条件：n,m较大，p为素数
+### 适用条件
+$n$,$m$较大，$p$为素数
 
-公式：$C(n,m)\%p = C(n/p,m/p)*C(n\%p,m\%p)\%p$
+### 公式
+$C_n^m\%p = C_{n/p}^{m/p}*C_{n\%p}^{m\%p}\%p$
 
-时间复杂度：$O(f(x)+g(n)log_pn)$
+### 时间复杂度
+$O(f(x)+g(n)log_pn)$
 
 $f(x)$为预处理组合数的复杂度，g(n)为单次求组合数的复杂度
 
 $p$小，逆元打表，$O(n+p+log_p n)$
 
-//$n$为处理阶乘，$p$为打表，$log_p n$为单次查询
+$n$为处理阶乘，$p$为打表，$log_p n$为单次查询
 
 $p$大，$exgcd$求逆元,$O(n+ln p*log_p n)$
 
-//n为处理阶乘，$ln p*log_p n$为单次查询
+n为处理阶乘，$ln p*log_p n$为单次查询
 
-
+### 运用
+$C_{n\%p}^{m\%p}$ 的$n$和$m$小于$p$，可以直接求
 ```c++
 long long Lucas(long long n, long long m, long long p)
 {
@@ -26,11 +30,21 @@ long long Lucas(long long n, long long m, long long p)
 ```
 ## exLucas
 
-适用条件：$n,m$较大，$p$不为素数
+### 适用条件
+$n,m$较大，$p$不为素数
 
-https://www.cnblogs.com/fzl194/p/9095177.html
+### 算法流程
+1. 分解$p$为质因子幂乘积的形式，即$p=\prod\limits_{i=1}^t p_i^{k_i}$
+2. 对每一个$p_i^{k_i}$，求$C_n^m \% p_i^{k_i}$
+3. 用CRT合并答案
 
-时间复杂度：$O(plog p)$
+怎么求$C_n^m \% p_i^{k_i}$比较复杂，要么其他人来完善，要么就当作黑盒用
+
+求$C_n^m \% p_i^{k_i}$的原理见
+[原博客](https://www.cnblogs.com/fzl194/p/9095177.html)
+
+### 时间复杂度
+$O(plog n)$
 
 ```c++
 ll qpow(ll base,ll exponent,ll mod)
@@ -114,7 +128,8 @@ ll exlucas(ll n,ll m,ll MOD)
             mod.push_back(mul),a.push_back(lucas(n,m,p,mul));
         }
     }
-    if(tmp>1) mod.push_back(tmp),a.push_back(lucas(n,m,tmp,tmp));
+    if(tmp>1)
+        mod.push_back(tmp),a.push_back(lucas(n,m,tmp,tmp));
     return CRT(a,mod);
 }
 ```
