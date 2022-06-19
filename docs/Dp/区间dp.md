@@ -1,10 +1,13 @@
 ## 视频
 
 <div style = "position: relative; width: 100%; height: 0; padding-bottom: 56.25%;">
-    <iframe style = "position: absolute; top: 0; left: 0; width: 100%;height: 100%;" frameborder="0" allowFullScreen="true" src="https://wiki-58c2.obs.myhuaweicloud.com:443/%E5%8C%BA%E9%97%B4DP.mp4?AccessKeyId=ELA8MJ5R84QLXCTFQQ1R&Expires=1686755788&Signature=8LlpzPJaTWS8xgl7KE1ZuFEGikg%3D"></iframe>
+    <iframe style = "position: absolute; top: 0; left: 0; width: 100%;height: 100%;" frameborder="0" allowFullScreen="true" src="https://wiki-58c2.obs.myhuaweicloud.com:443/%E5%8C%BA%E9%97%B4DP.mp4?AccessKeyId=ELA8MJ5R84QLXCTFQQ1R&Expires=1686756994&Signature=qNU1TzdyTcPUJzt6o43wbKAcp9M%3D"></iframe>
 </div>
 
-## 题目
+
+## <div style = "position: relative; width: 100%; height: 0; padding-bottom: 56.25%;">
+    <iframe style = "position: absolute; top: 0; left: 0; width: 100%;height: 100%;" frameborder="0" allowFullScreen="true" src="https://wiki-58c2.obs.myhuaweicloud.com:443/%E5%BF%AB%E9%80%9F%E5%B9%82.mp4?AccessKeyId=ELA8MJ5R84QLXCTFQQ1R&Expires=1686756870&Signature=C%2Bwt3wbnnbttgIC4zXyR5ILRlkQ%3D"></iframe>
+</div>
 
 [石子合并](https://vjudge.net/contest/500157#problem/L)
 
