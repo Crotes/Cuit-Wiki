@@ -1,14 +1,10 @@
 ## 视频
 
 <div style = "position: relative; width: 100%; height: 0; padding-bottom: 56.25%;">
-    <iframe style = "position: absolute; top: 0; left: 0; width: 100%;height: 100%;" frameborder="0" allowFullScreen="true" src="https://wiki-58c2.obs.myhuaweicloud.com:443/%E5%8C%BA%E9%97%B4DP.mp4?AccessKeyId=ELA8MJ5R84QLXCTFQQ1R&Expires=1686756994&Signature=qNU1TzdyTcPUJzt6o43wbKAcp9M%3D"></iframe>
+    <iframe style = "position: absolute; top: 0; left: 0; width: 100%;height: 100%;" frameborder="0" allowFullScreen="true" src="https://wiki-58c2.obs.myhuaweicloud.com:443/%E5%8C%BA%E9%97%B4DP.mp4?AccessKeyId=ELA8MJ5R84QLXCTFQQ1R&Expires=1686758527&Signature=i%2B2%2Bq%2BSE35jDJmKdBge7KwVkrv0%3D"></iframe>
 </div>
 
-
-## <div style = "position: relative; width: 100%; height: 0; padding-bottom: 56.25%;">
-    <iframe style = "position: absolute; top: 0; left: 0; width: 100%;height: 100%;" frameborder="0" allowFullScreen="true" src="https://wiki-58c2.obs.myhuaweicloud.com:443/%E5%BF%AB%E9%80%9F%E5%B9%82.mp4?AccessKeyId=ELA8MJ5R84QLXCTFQQ1R&Expires=1686756870&Signature=C%2Bwt3wbnnbttgIC4zXyR5ILRlkQ%3D"></iframe>
-</div>
-
+## 题目
 [石子合并](https://vjudge.net/contest/500157#problem/L)
 
 N堆石子摆成一条线。现要将石子有次序地合并成一堆。规定每次只能选相邻的2堆石子合并成新的一堆，并将新的一堆石子数记为该次合并的代价。计算将N堆石子合并成一堆的最小代价。
