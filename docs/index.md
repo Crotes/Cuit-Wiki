@@ -1,4 +1,7 @@
 # 欢迎来到Cuit-Wiki！
+
+> wiki中提供了我们平常录的课，其中有部分是寒假内容，并没有太分开，敬请谅解！
+
 ACM实验室主要参加ICPC，CCPC，SCPC这三个算法竞赛
 
 **ICPC**（International Collegiate Programming Contest），中文名称叫做“国际大学生程序设计竞赛”。之前由国际计算机协会（**ACM**）主办的，所以有人称它为ACM竞赛。经过近40年的发展， **ICPC** 已经成为全球最具影响力的大学生程序设计竞赛，目前赛事由 **AWS** 、 **华为** 和 **Jetbrains** 赞助。
