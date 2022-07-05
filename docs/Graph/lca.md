@@ -69,6 +69,5 @@ int main(void){
     return 0;
 }
 
-// 倍增lca  tarjan的lca
 ```
 
