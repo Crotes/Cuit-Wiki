@@ -1,8 +1,4 @@
-## 视频
-
-<div style = "position: relative; width: 100%; height: 0; padding-bottom: 56.25%;">
-    <iframe style = "position: absolute; top: 0; left: 0; width: 100%;height: 100%;" frameborder="0" allowFullScreen="true" src="https://wiki-58c2.obs.myhuaweicloud.com:443/%E5%8C%BA%E9%97%B4DP.mp4?AccessKeyId=ELA8MJ5R84QLXCTFQQ1R&Expires=1686758527&Signature=i%2B2%2Bq%2BSE35jDJmKdBge7KwVkrv0%3D"></iframe>
-</div>
+[讲课链接](https://www.bilibili.com/video/BV1G84y1a7Fo/?spm_id_from=333.999.0.0)
 
 ## 题目
 [石子合并](https://vjudge.net/contest/500157#problem/K)
@@ -43,4 +39,3 @@ int main(void){
 	printf("%d",dp[1][n]);
 } 
 ```
-
