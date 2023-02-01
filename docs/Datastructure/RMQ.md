@@ -30,7 +30,7 @@ inline void init(int n){
 
 这个动态规划可以用下面这个图来解释
 
-![st2](https://cdn.jsdelivr.net/gh/Crotes/jsd/image/st/st1.png)
+![st2](https://cdn.jsdelivr.net/gh/Crotes/blogjsd/image/st/st1.png)
 
 整段的最大值是左右两段其中之一的最大值。
 
@@ -51,7 +51,7 @@ for(int i = 1;i < n;i++){
 
 区间长度为`2 ^ m`长，这是`[L,r]`内最长的次方数，也是最长的`2^n`长度。
 
-![st2](https://cdn.jsdelivr.net/gh/Crotes/jsd/image/st/st2.png)
+![st2](https://cdn.jsdelivr.net/gh/Crotes/blogjsd/image/st/st2.png)
 
 ## 模板题代码
 
