@@ -1,8 +1,6 @@
 # 欢迎来到Cuit-Wiki！
 
-> wiki中提供了我们平常录的课，其中有部分是寒假内容，并没有太分开，敬请谅解！
-
-ACM实验室主要参加ICPC，CCPC，SCPC这三个算法竞赛
+ACM实验室主要参加ICPC，CCPC，SCPC这三个算法竞赛。其他的算法竞赛如蓝桥杯，天梯赛等也会积极参加。
 
 **ICPC**（International Collegiate Programming Contest），中文名称叫做“国际大学生程序设计竞赛”。之前由国际计算机协会（**ACM**）主办的，所以有人称它为ACM竞赛。经过近40年的发展， **ICPC** 已经成为全球最具影响力的大学生程序设计竞赛，目前赛事由 **AWS** 、 **华为** 和 **Jetbrains** 赞助。
 
@@ -18,6 +16,8 @@ World Final会在区域赛次年上半年举行，国内一般会分配到十几
 
 **SCPC**（Sichuan Collegiate Programming Contest），中文名称叫做“四川省大学生程序设计竞赛”。只有四川省大学生参加，含金量低于ICPC和CCPC
 
- **Cuit Wiki** 由成都信息工程大学ACM实验室于2022年1月搭建上线，致力于为本校新生与广大ACMer提供学习资料，本站知识树主要参考于杜老师分享的知识图谱，由本校实验室成员与为Cuit Wiki提供帮助的小伙伴们补充与修改。
+ **Cuit Wiki** 由成都信息工程大学ACM实验室于2022年1月搭建上线，致力于为本校新生与广大ACMer提供学习资料，本站知识树主要参考于杜瑜皓老师分享的知识图谱，由本校实验室成员与为Cuit Wiki提供帮助的小伙伴们补充与修改。
 
  **Cuit Wiki** 在搭建过程中参考了[oi Wiki](https://oi-wiki.org/)与[ctf wiki](https://ctf-wiki.org/)，在此一并感谢。
+
+[b站官方号的个人空间](https://space.bilibili.com/83744206?spm_id_from=333.337.0.0)，发布了往年学长学姐的讲课视频。
