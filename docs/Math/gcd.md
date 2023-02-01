@@ -1,8 +1,4 @@
-## 视频
-
-<div style = "position: relative; width: 100%; height: 0; padding-bottom: 56.25%;">
-    <iframe style = "position: absolute; top: 0; left: 0; width: 100%;height: 100%;" frameborder="0" allowFullScreen="true" src="https://wiki-58c2.obs.myhuaweicloud.com:443/%E7%B4%A0%E6%95%B0%E7%AD%9B%E4%B8%8Egcd.mp4?AccessKeyId=ELA8MJ5R84QLXCTFQQ1R&Expires=1686756188&Signature=IBl5Fx8ZDUK8R9UvfIxnK%2BJGog0%3D"></iframe>
-</div>
+[讲课链接](https://www.bilibili.com/video/BV1hP411F7gq/?spm_id_from=333.999.0.0)
 
 ## 最大公约数和最小公倍数 
 
