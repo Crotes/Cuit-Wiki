@@ -1,5 +1,1 @@
-## 视频
-
-<div style = "position: relative; width: 100%; height: 0; padding-bottom: 56.25%;">
-    <iframe style = "position: absolute; top: 0; left: 0; width: 100%;height: 100%;" frameborder="0" allowFullScreen="true" src="https://wiki-58c2.obs.myhuaweicloud.com:443/%E7%8A%B6%E5%8E%8BDP.mp4?AccessKeyId=ELA8MJ5R84QLXCTFQQ1R&Expires=1687412804&Signature=C0SbFZNY1zJ%2BHKb66ZHxJOtJ5iw%3D"></iframe>
-</div>
+[讲课链接](https://www.bilibili.com/video/BV1V24y1e7sG/?spm_id_from=333.999.0.0)
