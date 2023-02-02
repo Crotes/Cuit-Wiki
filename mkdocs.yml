@@ -195,9 +195,6 @@ nav:
   - '几何': 
     - 'Geometry/index.md'
     - '点类': 
-      - '点积': 'Geometry/点积.md'
-      - '叉积': 'Geometry/叉积.md'
-      - '极角序': 'Geometry/极角序.md'
     - '线段相关':
       - '相交判定': 'Geometry/相关判定.md'
       - '交点': 'Geometry/交点.md'
