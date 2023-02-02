@@ -1,0 +1,44 @@
+# 狄利克雷前后缀
+$O(n\log\log n)$
+
+原缀已知 $a$，求 $b$
+
+逆缀已知 $b$，求 $a$
+
+答案保存在原数组上
+## 狄利克雷前缀
+$b_n=\sum\limits_{d|n}a_d$
+```cpp
+for(int i=1;i<=cnt && primes[i]<=n;++i)
+{
+    for(int j=1;j*primes[i]<=n;++j)
+        a[j*primes[i]]+=a[j];
+}
+```
+## 狄利克雷后缀
+$b_d=\sum\limits_{d|n}a_n$
+```cpp
+for(int i=1;i<=cnt && primes[i]<=n;++i)
+{
+    for(int j=n/primes[i];j;--j)
+        a[j]+=a[j*primes[i]];
+}
+```
+## 逆狄利克雷前缀
+$b_n=\sum\limits_{d|n}a_d$
+```cpp
+for(int i=cnt;i;--i)
+{
+    for(int j=n/primes[i];j;--j)
+        a[j*primes[i]]-=a[j];
+}
+```
+## 逆狄利克雷后缀
+$b_d=\sum\limits_{d|n}a_n$
+```cpp
+for(int i=cnt;i;--i)
+{
+    for(int j=1;j*primes[i]<=n;++j)
+        a[j]-=a[j*primes[i]];
+}
+```
