@@ -194,7 +194,7 @@ nav:
     - '线性规划': 'Linear Programming/线性规划.md'
   - '几何': 
     - 'Geometry/index.md'
-    - '点类': 
+    - '点类': 'Geometry/点类.md'
     - '线段相关':
       - '相交判定': 'Geometry/相关判定.md'
       - '交点': 'Geometry/交点.md'
