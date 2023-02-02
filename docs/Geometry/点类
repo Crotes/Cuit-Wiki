@@ -1,0 +1,68 @@
+## 点积
+向量点积，几何意义是$|a||b|cos(a,b)$，结果表示夹角情况，正锐角，0直角，负钝角
+## 叉积
+向量叉积，几何意义是$|a||b|sin(a,b)$，结果表示向量共起点时，只考虑180以内的夹角，b在a的什么方向，正逆时针，0共线，负顺时针
+## 极坐标系
+在平面上取一定点 $O$，从 $O$ 引一条水平射线 $Ox$，规定方向自左至右，再选定一个长度单位并规定角旋转的正方向为逆时针方向，这样就构成了一个极坐标系
+
+点O叫作极点（类似笛卡尔坐标系的原点）
+
+射线叫作极轴（类似笛卡尔坐标系的x正半轴）
+
+极坐标系中的点 $A$ 用 $(r,\theta)$ 表示，极径$r=|OA|$，极角$\theta=\angle AOx$
+
+# 极角序
+选定极点，其他点按照极角排序，如果在坐标系的上下两边，上边大于下边，如果同边按叉积升序
+```cpp
+typedef double db;
+const db EPS = 1e-9;
+//由于硬件限制，浮点数运算有误差，eps用来消除误差
+inline int sign(db a) { return a < -EPS ? -1 : a > EPS; }
+//判断数符号，负数返回-1，0返回0，正数返回1
+inline int cmp(db a, db b) { return sign(a - b); }
+//比较两数大小
+//点类，向量类
+//因为有许多操作相似，所以并在一起
+struct P
+{
+    db x, y;
+    //点表示坐标，向量表示向量
+    P() {}
+    P(db _x, db _y) : x(_x), y(_y) {}
+    //构造函数
+    P operator+(P p) { return {x + p.x, y + p.y}; }
+    P operator-(P p) { return {x - p.x, y - p.y}; }
+    P operator*(db d) { return {x * d, y * d}; }
+    P operator/(db d) { return {x / d, y / d}; }
+    //向量加减乘除
+    bool operator<(P p) const
+    {
+        int c = cmp(x, p.x);
+        if (c)
+            return c == -1;
+        return cmp(y, p.y) == -1;
+    }
+    bool operator==(P o) const
+    {
+        return cmp(x, o.x) == 0 && cmp(y, o.y) == 0;
+    }
+    //比较字典序
+    db dot(P p) { return x * p.x + y * p.y; }
+    //点积
+    db det(P p) { return x * p.y - y * p.x; }
+    //叉积
+    db distTo(P p) { return (*this - p).abs(); }
+    //点距离
+    db alpha() { return atan2(y, x); }
+    void read() { cin >> x >> y; }
+    void write() { cout << "(" << x << "," << y << ")" << endl; }
+    db abs() { return sqrt(abs2()); }
+    db abs2() { return x * x + y * y; }
+    P rot90() { return P(-y, x); }
+    P unit() { return *this / abs(); }
+    int quad() const { return sign(y) == 1 || (sign(y) == 0 && sign(x) >= 0); }
+    //判断点在极角坐标系上半边还是下半边，极点和极轴也算上半边
+    P rot(db an) { return {x * cos(an) - y * sin(an), x * sin(an) + y * cos(an)}; }
+    //向量旋转
+};
+```
