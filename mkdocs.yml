@@ -192,6 +192,9 @@ nav:
       - 'Burnside引理': 'Group/Burnside引理.md'
       - 'Polya定理': 'Group/Polya定理.md'
     - '线性规划': 'Linear Programming/线性规划.md'
+    - '高数': 'Math/高数.md'
+    - '自然数幂和': 'Math/自然数幂和.md'
+    - '狄利克雷前缀': 'Math/狄利克雷前缀.md'
   - '几何': 
     - 'Geometry/index.md'
     - '点类': 'Geometry/点类.md'
@@ -217,7 +220,7 @@ nav:
   - '其他': 
     - 'Others/index.md'
     - '离散': 'Others/离散.md'
-    - '前缀和/差分': 'Others/前缀和差分.md'
+    - '前缀和/差分': 'Others/前缀和.md'
     - '逆序对': 'Others/逆序对.md'
     - '扫描线': 'Others/扫描线.md'
     - '双指针': 'Others/双指针.md'
@@ -233,10 +236,11 @@ nav:
         - '点分治': 'Others/点分治.md'
         - '边分治': 'Others/边分治.md'
         - '动态点分治': 'Others/动态点分治.md'
-      - 'CDP分治': 'Others/CDP分治.md'
+      - 'CDQ分治': 'Others/CDQ分治.md'
     - '随机':
       - '爬山': 'Others/爬山.md'
       - '模拟退火': 'Others/模拟退火.md'
+    - '随机': 'Others/随机.md'
     - '对拍': 'Others/对拍.md'
     - '常数优化': 'Others/常数优化.md'
     - '读入优化': 'Others/读入优化.md'
