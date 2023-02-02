@@ -36,8 +36,6 @@ nav:
         - '归并排序': 'Base/归并排序.md'
         - '桶排序': 'Base/桶排序.md'
         - '计数排序': 'Base/计数排序.md' 
-        - '堆排序': 'Base/堆排序.md'
-        - '希尔排序': 'Base/希尔排序.md'
       - '高精度': 'Base/高精度.md'
       - '位运算': 'Base/位运算.md'
       - '时空复杂度分析': 'Base/时空复杂度分析.md'
@@ -56,11 +54,12 @@ nav:
       - '树链剖分': 'Datastructure/树链剖分.md'
       - '笛卡尔树': 'Datastructure/笛卡尔树.md'
       - '树的启发式合并': 'Datastructure/树的启发式合并.md'
-      - 'DSU': 'Datastructure/DSU.md'
+      - 'DSU on tree': 'Datastructure/DSU.md'
       - 'LCT': 'Datastructure/LCT.md'
       - '虚树': 'Datastructure/虚树.md'
       - 'KD树': 'Datastructure/KD树.md'
       - '树的哈希': 'Datastructure/树的哈希.md'
+      - '析合树': 'Datastructure/析合树.md'
     - '并查集': 'Datastructure/并查集.md'
     - '分块': 'Datastructure/分块.md'
     - 'STL': 
@@ -72,7 +71,7 @@ nav:
       - 'multiset': 'Datastructure/multiset.md'
       - 'bitset': 'Datastructure/bitset.md'
       - 'pbds': 'Datastructure/pbds.md'
-    - 'RMQ': 'Datastructure/RMQ.md'
+    - 'ST表': 'Datastructure/RMQ.md'
   - '图论': 
     - 'Graph/index.md'
     - '图的概念': 'Graph/图的概念.md'
@@ -103,7 +102,6 @@ nav:
     - 'K短路': 'Graph/K短路.md'
     - '支配树': 'Graph/支配树.md'
     - '全局最小割': 'Graph/全局最小割.md'
-    - '弦图': 'Graph/弦图.md'
   - '动态规划': 
     - 'Dp/index.md'
     - '线性dp及01背包入门': 'Dp/线性dp及01背包入门.md'
@@ -129,7 +127,6 @@ nav:
     - 'manacher': 'String/manacher.md'
     - '最小表示法': 'String/最小表示法.md'
     - 'Lyndon分解': 'String/Lyndon分解.md'
-    - '后缀树': 'String/后缀树.md'
   - '数学': 
     - 'Math/index.md'
     - '数论':
@@ -154,9 +151,6 @@ nav:
         - 'min25筛': 'Math/min25筛.md'
       - 'Miller Rabin': 'Math/Miller Rabin.md'
       - 'Pollard Rho': 'Math/Pollard Rho.md'
-      - '佩尔方程': 'Math/佩尔方程.md'
-      - '单位根反演': 'Math/单位根反演.md'
-      - '二次剩余': 'Math/二次剩余.md'
     - '线性代数':
       - '矩阵快速幂': 'Linear Algebra/矩阵快速幂.md'
       - '高斯消元': 'Linear Algebra/高斯消元.md'
@@ -166,10 +160,9 @@ nav:
       - '常系数线性递推': 'Linear Algebra/常系数线性递推.md' 
       - '矩阵树定理': 'Linear Algebra/矩阵树定理.md'
       - 'BM': 'Linear Algebra/BM.md'
-      - 'BEST定理': 'Linear Algebra/BEST定理.md'
-      - '特征值,特征向量': 'Linear Algebra/特征值.md'
     - '组合数学':
       - '组合数': 'Combinatorics/组合数.md'
+      - '球盒问题': 'Combinatorics/球盒问题.md'
       - '二项式定理': 'Combinatorics/二项式定理.md'
       - '概率论': 'Combinatorics/概率论.md'
       - '容斥定理':
@@ -185,12 +178,9 @@ nav:
         - '贝尔数': 'Combinatorics/贝尔数.md' 
         - '伯努利数': 'Combinatorics/伯努利数.md'
       - 'purfer序列': 'Combinatorics/purfer序列.md'
-      - 'LGV引理': 'Combinatorics/LGV引理.md'
-      - '杨表': 'Combinatorics/杨表.md'
     - '博弈论':
       - 'SG函数': 'Game/SG函数.md'
       - '常见结论': 'Game/常见结论.md'
-      - '不平等博弈': 'Game/不平等博弈.md'
     - '多项式':
       - 'FFT/NTT': 'Polynomial/FFT.md'
       - '拉格朗日插值': 'Polynomial/拉格朗日插值.md'
@@ -227,8 +217,6 @@ nav:
     - '点定位': 'Geometry/点定位.md'
     - '最小圆覆盖': 'Geometry/最小圆覆盖.md'
     - 'Voronoi图': 'Geometry/Voronoi图.md'
-    - '圆反演': 'Geometry/圆反演.md'
-    - 'Picks定理': 'Geometry/Picks定理.md'
   - '其他': 
     - 'Others/index.md'
     - '离散': 'Others/离散.md'
@@ -243,7 +231,6 @@ nav:
       - '剪枝': 'Others/剪枝.md'
       - '折半搜索': 'Others/折半搜索.md'
       - 'DLX': 'Others/DLX.md'
-      - 'AStar': 'Others/AStar.md'
     - '分治':
       - '树上分治': 
         - '点分治': 'Others/点分治.md'
@@ -253,7 +240,6 @@ nav:
     - '随机':
       - '爬山': 'Others/爬山.md'
       - '模拟退火': 'Others/模拟退火.md'
-      - '遗传': 'Others/遗传.md'
     - '对拍': 'Others/对拍.md'
     - '常数优化': 'Others/常数优化.md'
     - '读入优化': 'Others/读入优化.md'
