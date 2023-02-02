@@ -71,7 +71,7 @@ nav:
       - 'multiset': 'Datastructure/multiset.md'
       - 'bitset': 'Datastructure/bitset.md'
       - 'pbds': 'Datastructure/pbds.md'
-    - 'ST表': 'Datastructure/RMQ.md'
+    - 'ST表': 'Datastructure/ST表.md'
   - '图论': 
     - 'Graph/index.md'
     - '图的概念': 'Graph/图的概念.md'
