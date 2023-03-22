@@ -94,3 +94,30 @@ signed main(void){
     return 0;
 }
 ```
+## 板子
+\_\_lg是一条指令就能完成，所以不需要预处理log数组
+
+把小的那一维放在前面会更cache友好
+```cpp
+const int N = 5e4 + 3;
+const int M = __lg(N) + 1;
+namespace SparseTable
+{
+    int st[M][N];
+    void init(int n)
+    {
+        int m=__lg(n);
+        memcpy(st[0],a,sizeof(int)*(n+1));
+        for (int i = 1; i <=m; ++i)
+        {
+            for (int j = 1; j + (1 << i) - 1 <= n; ++j)
+                st[i][j] = min(st[i-1][j], st[i-1][j + (1 << (i - 1))]);
+        }
+    }
+    int query(int l, int r)
+    {
+        int s = __lg(r - l + 1);
+        return min(st[s][l], st[s][r - (1 << s) + 1]);
+    }
+};
+```
