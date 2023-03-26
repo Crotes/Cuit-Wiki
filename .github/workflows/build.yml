@@ -33,6 +33,15 @@ jobs:
       - name: 安装Mkdocs
         run: pip install mkdocs-material
 
+      - name: 安装mkdocs-statistics-plugin-1
+        run: cd mkdocs-statistics-plugin
+
+      - name: 安装mkdocs-statistics-plugin-2
+        run: pip install -e .
+
+      - name: 安装mkdocs-statistics-plugin-3
+        run: cd ../
+              
       - name: 构建页面
         run: mkdocs build -v
 
