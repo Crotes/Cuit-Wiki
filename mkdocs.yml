@@ -10,7 +10,7 @@ repo_url: 'https://github.com/Crotes/Cuit-Wiki'
 edit_uri: 'https://github.com/Crotes/Cuit-Wiki/edit/main/docs/'
 
 # Copyright
-copyright: 'Copyright &copy; 2022 - 2022 Cuit Wiki'
+copyright: 'Copyright &copy; 2022 - 2023 Cuit Wiki'
 
 # Contents
 nav:
@@ -302,3 +302,4 @@ markdown_extensions:
 extra_javascript:
   - https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML
   - Extra/JS/mathjaxhelper.js
+  - '//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js'
