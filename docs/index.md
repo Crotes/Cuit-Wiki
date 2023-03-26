@@ -1,3 +1,8 @@
+---
+statistics: True
+page_statistics: False
+---
+
 # 欢迎来到Cuit-Wiki！
 
 ACM实验室主要参加ICPC，CCPC，SCPC这三个算法竞赛。其他的算法竞赛如蓝桥杯，天梯赛等也会积极参加。
@@ -21,3 +26,6 @@ World Final会在区域赛次年上半年举行，国内一般会分配到十几
  **Cuit Wiki** 在搭建过程中参考了[oi Wiki](https://oi-wiki.org/)与[ctf wiki](https://ctf-wiki.org/)，在此一并感谢。
 
 [b站官方号的个人空间](https://space.bilibili.com/83744206?spm_id_from=333.337.0.0)，发布了往年学长学姐的讲课视频。
+
+> 本站共有 {{ pages }} 个页面，{{ words }} 个字，{{ codes }} 行代码。
+

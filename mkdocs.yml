@@ -303,3 +303,14 @@ extra_javascript:
   - https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML
   - Extra/JS/mathjaxhelper.js
   - '//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js'
+
+# mkdocs-statistics-plugin
+plugins:
+  - statistics:
+      words_placeholder: \{\{\s*words\s*\}\}
+      pages_placeholder: \{\{\s*pages\s*\}\}
+      codes_placeholder: \{\{\s*codes\s*\}\}
+      page_statistics: True
+      page_read_time: True
+      words_per_minute: 300
+      codelines_per_minute: 80
