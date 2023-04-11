@@ -39,6 +39,7 @@ nav:
       - '高精度': 'Base/高精度.md'
       - '位运算': 'Base/位运算.md'
       - '时空复杂度分析': 'Base/时空复杂度分析.md'
+      - '程序设计竞赛中的命名规范,短路,编码风格': '程序设计竞赛中的命名规范,短路,编码风格.md'
   - '数据结构': 
     - 'Datastructure/index.md'
     - '队列': 'Datastructure/队列.md'
@@ -51,7 +52,8 @@ nav:
       - '树状数组': 'Datastructure/树状数组.md'
       - '平衡树': 'Datastructure/平衡树.md'
       - '树套树': 'Datastructure/树套树.md'
-      - '树链剖分': 'Datastructure/树链剖分.md'
+      - '重链剖分': 'Datastructure/重链剖分.md'
+      - '长链剖分': 'Datastructure/长链剖分.md'
       - '笛卡尔树': 'Datastructure/笛卡尔树.md'
       - '树的启发式合并': 'Datastructure/树的启发式合并.md'
       - 'DSU on tree': 'Datastructure/DSU.md'
