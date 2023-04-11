@@ -123,7 +123,7 @@ nav:
     - '后缀数组': 'String/后缀数组.md'
     - '后缀自动机': 'String/后缀自动机.md'
     - '回文自动机': 'String/回文自动机.md'
-    - '扩展kmp': 'String/扩展kmp.md'
+    - 'Z函数': 'String/Z function.md'
     - 'manacher': 'String/manacher.md'
     - '最小表示法': 'String/最小表示法.md'
     - 'Lyndon分解': 'String/Lyndon分解.md'
