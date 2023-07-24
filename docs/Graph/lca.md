@@ -73,10 +73,10 @@ int main(void){
 
 ```
 
-## 倍增求LCA板子（有权和无权）
+## 倍增求LCA板子
 ```c++
 const int N=5e5+3;
-const int M=20;
+const int M=__lg(N)+1;
 struct EDGE
 {
     int to,nxt;
@@ -146,92 +146,6 @@ struct LCA
         return fa[x][0];
     }
 };
-const int N=4e4+3;
-const int M=20;
-struct EDGE
-{
-    int to,nxt;
-    ll w;
-};
-struct LCA
-{
-    EDGE e[N<<1];
-    int fa[N][M],dep[N],head[N],lg[N];
-    ll cost[N][M];
-    int tot;
-    queue<int> q;
-    void init0()
-    {
-        lg[0]=0;
-        for(int i=1;i<N;++i)
-            lg[i]=lg[i-1]+(1<<(lg[i-1])==i);
-    }
-    void init(int n)
-    {
-        tot=0;
-        memset(head,0,sizeof(int)*(n+1));
-        memset(dep,0,sizeof(int)*(n+1));
-    }
-    void AddEdge(int u,int v,ll w)
-    {
-        e[++tot]={u,head[v],w};
-        head[v]=tot;
-        e[++tot]={v,head[u],w};
-        head[u]=tot;
-    }
-    void bfs(int root)
-    {
-        q.push(root);
-        dep[root]=1;
-        int u,v,DEP;
-        while(!q.empty())
-        {
-            u=q.front();
-            q.pop();
-            for(int i=head[u];i;i=e[i].nxt)
-            {
-                v=e[i].to;
-                if(dep[v])
-                    continue;
-                q.push(v);
-                dep[v]=dep[u]+1;
-                fa[v][0]=u;
-                cost[v][0]=e[i].w;
-                DEP=lg[dep[u]];
-                for(int j=1;j<=DEP;++j)
-                {
-                    fa[v][j]=fa[fa[v][j-1]][j-1];
-                    cost[v][j]=cost[fa[v][j-1]][j-1]+cost[v][j-1];
-                }
-            }
-        }
-    }
-    int lca(int x,int y)
-    {
-        if(dep[x]>dep[y])
-            swap(x,y);
-        ll ans=0;
-        for(int i=0,dif=dep[y]-dep[x];dif;++i,dif>>=1)
-        {
-            if(dif&1)
-            {
-                ans+=cost[y][i];
-                y=fa[y][i];
-            }
-        }
-        if(x==y)
-            return ans;
-        for(int i=lg[dep[x]];i>=0;--i)
-        {
-            if(fa[x][i]==fa[y][i])
-                continue;
-            ans+=cost[x][i]+cost[y][i];
-            x=fa[x][i];
-            y=fa[y][i];
-        }
-        return ans+cost[x][0]+cost[y][0];
-    }
-};
 ```
 ## 树剖求LCA板子（有点权，有边权，无权）
 ### 点权
@@ -252,69 +166,64 @@ struct edge
 };
 struct SegmentTree
 {
-    int segL[N << 2], segR[N << 2];
-    ll sum[N << 2], lazy[N << 2];
+    struct node
+    {
+        ll sum,lz;
+    }st[N<<2];
     void pushup(int id)
     {
-        sum[id] = sum[id << 1] + sum[id << 1 | 1];
+        st[id].sum=(st[id<<1].sum+st[id<<1|1].sum);
     }
-    void pushdown(int id)
+    void pushdown(int id,int lsonlen,int rsonlen)
     {
-        if (!lazy[id])
+        if (!st[id].lz)
             return;
-        lazy[id << 1] += lazy[id];
-        lazy[id << 1 | 1] += lazy[id];
-        sum[id << 1] += lazy[id] * (segR[id << 1] - segL[id << 1] + 1);
-        sum[id << 1 | 1] += lazy[id] * (segR[id << 1 | 1] - segL[id << 1 | 1] + 1);
-        lazy[id] = 0;
+        st[id<<1].lz+=st[id].lz;
+        st[id<<1|1].lz+=st[id].lz;
+        st[id<<1].sum+=st[id].lz*lsonlen;
+        st[id<<1|1].sum+=st[id].lz*rsonlen;
+        st[id].lz=0;
     }
-    void build(int id, int l, int r)
+    void build(int id,int l,int r)
     {
-        segL[id] = l;
-        segR[id] = r;
-        if (l == r)
+        if (l ==r)
         {
-            sum[id] = revW[l];
+            st[id]={revW[l],0};
             return;
         }
-        int mid = (l + r) >> 1;
-        build(id << 1, l, mid);
-        build(id << 1 | 1, mid + 1, r);
+        int mid=(l + r)/2;
+        build(id << 1,l,mid);
+        build(id<<1|1,mid + 1,r);
         pushup(id);
     }
-    void update(int id, int L, int R, ll val)
+    void update(int id,int segl,int segr,int l,int r,ll val)
     {
-        if (L <= segL[id] && segR[id] <= R)
+        if (l <=segl && segr <=r)
         {
-            sum[id] += val * (segR[id] - segL[id] + 1);
-            lazy[id] += val;
+            st[id].sum+=val*(segr-segl+1);
+            st[id].lz+=val;
             return;
         }
-        int mid = (segL[id] + segR[id]) >> 1;
-        pushdown(id);
-        if (L <= mid)
-            update(id << 1, L, R, val);
-        if (R > mid)
-            update(id << 1 | 1, L, R, val);
+        int mid=(segl + segr)/2;
+        pushdown(id,mid-segl+1,segr-mid);
+        if (l <=mid)
+            update(id << 1,segl,mid,l,r,val);
+        if (r > mid)
+            update(id<<1|1,mid+1,segr,l,r,val);
         pushup(id);
     }
-    ll query(int id, int L, int R)
+    ll query(int id,int segl,int segr,int l,int r)
     {
-        if (L <= segL[id] && segR[id] <= R)
-            return sum[id];
-        int mid = (segL[id] + segR[id]) >> 1;
-        pushdown(id);
-        ll res = 0;
-        if (L <= mid)
-            res += query(id << 1, L, R);
-        if (R > mid)
-            res += query(id << 1 | 1, L, R);
+        if (l <=segl && segr <=r)
+            return st[id].sum;
+        int mid=(segl + segr)/2;
+        pushdown(id,mid-segl+1,segr-mid);
+        ll res=0;
+        if (l <=mid)
+            res+=query(id << 1,segl,mid,l,r);
+        if (r > mid)
+            res+=query(id<<1|1,mid+1,segr,l,r);
         return res;
-    }
-    void init(int n)
-    {
-        memset(lazy, 0, sizeof(lazy[0]) * (n << 2));
-        build(1, 1, n);
     }
 };
 struct heavyPathDecomposition
@@ -339,7 +248,7 @@ struct heavyPathDecomposition
         dfs2(1, 1);
         for (int i = 1; i <= n; ++i)
             revW[dfn[i]] = W[i];
-        st.init(n);
+        st.build(1,1,n);
     }
     void addEdge(int u, int v)
     {
@@ -383,12 +292,12 @@ struct heavyPathDecomposition
         {
             if (dep[top[u]] < dep[top[v]])
                 swap(u, v);
-            res += st.query(1, dfn[top[u]], dfn[u]);
+            res += st.query(1,1,n,dfn[top[u]], dfn[u]);
             u = fa[top[u]];
         }
         if (dfn[u] > dfn[v])
             swap(u, v);
-        return res + st.query(1, dfn[u], dfn[v]);
+        return res + st.query(1,1,n, dfn[u], dfn[v]);
     }
     void update(int u, int v, ll x)
     {
@@ -396,12 +305,12 @@ struct heavyPathDecomposition
         {
             if (dep[top[u]] < dep[top[v]])
                 swap(u, v);
-            st.update(1, dfn[top[u]], dfn[u], x);
+            st.update(1,1,n, dfn[top[u]], dfn[u], x);
             u = fa[top[u]];
         }
         if (dfn[u] > dfn[v])
             swap(u, v);
-        st.update(1, dfn[u], dfn[v], x);
+        st.update(1,1,n, dfn[u], dfn[v], x);
     }
 } hp;
 hp.init(n);
@@ -427,49 +336,63 @@ struct edge
 };
 struct SegmentTree
 {
-    int segL[N << 2], segR[N << 2];
-    ll sum[N << 2];
+    struct node
+    {
+        ll sum,lz;
+    }st[N<<2];
     void pushup(int id)
     {
-        sum[id] = sum[id << 1] + sum[id << 1 | 1];
+        st[id].sum=(st[id<<1].sum+st[id<<1|1].sum);
     }
-    void build(int id, int l, int r)
+    void pushdown(int id,int lsonlen,int rsonlen)
     {
-        segL[id] = l;
-        segR[id] = r;
-        if (l == r)
+        if (!st[id].lz)
+            return;
+        st[id<<1].lz+=st[id].lz;
+        st[id<<1|1].lz+=st[id].lz;
+        st[id<<1].sum+=st[id].lz*lsonlen;
+        st[id<<1|1].sum+=st[id].lz*rsonlen;
+        st[id].lz=0;
+    }
+    void build(int id,int l,int r)
+    {
+        if (l ==r)
         {
-            sum[id] = revW[l];
+            st[id]={revW[l],0};
             return;
         }
-        int mid = (l + r) >> 1;
-        build(id << 1, l, mid);
-        build(id << 1 | 1, mid + 1, r);
+        int mid=(l + r)/2;
+        build(id << 1,l,mid);
+        build(id<<1|1,mid + 1,r);
         pushup(id);
     }
-    void update(int id, int pos, ll val)
+    void update(int id,int segl,int segr,int l,int r,ll val)
     {
-        if (segL[id] == segR[id])
+        if (l <=segl && segr <=r)
         {
-            sum[id] += val;
+            st[id].sum+=val*(segr-segl+1);
+            st[id].lz+=val;
             return;
         }
-        if (pos <= ((segL[id] + segR[id]) >> 1))
-            update(id << 1, pos, val);
-        else
-            update(id << 1 | 1, pos, val);
+        int mid=(segl + segr)/2;
+        pushdown(id,mid-segl+1,segr-mid);
+        if (l <=mid)
+            update(id << 1,segl,mid,l,r,val);
+        if (r > mid)
+            update(id<<1|1,mid+1,segr,l,r,val);
         pushup(id);
     }
-    ll query(int id, int L, int R)
+    ll query(int id,int segl,int segr,int l,int r)
     {
-        if (L <= segL[id] && segR[id] <= R)
-            return sum[id];
-        int mid = (segL[id] + segR[id]) >> 1;
-        ll res = 0;
-        if (L <= mid)
-            res += query(id << 1, L, R);
-        if (R > mid)
-            res += query(id << 1 | 1, L, R);
+        if (l <=segl && segr <=r)
+            return st[id].sum;
+        int mid=(segl + segr)/2;
+        pushdown(id,mid-segl+1,segr-mid);
+        ll res=0;
+        if (l <=mid)
+            res+=query(id << 1,segl,mid,l,r);
+        if (r > mid)
+            res+=query(id<<1|1,mid+1,segr,l,r);
         return res;
     }
 };
@@ -547,18 +470,18 @@ struct heavyPathDecomposition
         {
             if (dep[top[u]] < dep[top[v]])
                 swap(u, v);
-            res += st.query(1, dfn[top[u]], dfn[u]);
+            res += st.query(1,1,n, dfn[top[u]], dfn[u]);
             u = fa[top[u]];
         }
         if (dfn[u] > dfn[v])
             swap(u, v);
         if (u != v)
-            res += st.query(1, dfn[u] + 1, dfn[v]);
+            res += st.query(1,1,n, dfn[u] + 1, dfn[v]);
         return res;
     }
     void update(int i, ll x)
     {
-        st.update(1, dfn[match[i]], x);
+        st.update(1,1,n, dfn[match[i]], x);
     }
 } hp;
 hp.init(n);
