@@ -39,3 +39,26 @@ int main(void){
 	printf("%d",dp[1][n]);
 } 
 ```
+对于删除中间区间会导致两边区间合并的（两边区间可以一起删的），可以记录区间l，r，（l左边，包括l），还有多少个可以和l这个点一起删除的元素
+## 形式1
+```cpp
+for(int len=2;len<=n;++len)
+{
+    for(int l=1,r=len;r<=n;++l,++r)
+    {
+        for(int k=l;k<r;++k)
+            dp[l][r]=min(dp[l][r],dp[l][k]+dp[k+1][r]);
+    }
+}
+```
+## 形式2
+```cpp
+for(int l=n-1;l;--l)
+{
+    for(int r=l+1;r<=n;++r)
+    {
+        for(int k=l;k<r;++k)
+            dp[l][r]=max(dp[l][r],dp[l][k]+dp[k+1][r]);
+    }
+}
+```
