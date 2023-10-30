@@ -23,46 +23,56 @@ base可以取131或13331，冲突小
 
 ```cpp
 typedef unsigned long long ull;
-const int N=1e6+1;
-const ull base=131;
-const ull mod=1e9+9;
-ull has[N],power[N];
+const int N=1e6+1,modnum=2;
+const ull base=131,mod[modnum]={(ull)1e8+7,(ull)1e9+9};
+ull pw[modnum][N];
 void init()
 {
-    power[0]=1;
-    for(int i=1;i<N;++i)
-        power[i]=power[i-1]*base%mod;
+    for(int j=0;j<modnum;++j)
+    {
+        pw[j][0]=1;
+        for(int i=1;i<N;++i)
+            pw[j][i]=pw[j][i-1]*base%mod[j];
+    }
 }
-void Hash(string s)
+void initHash(string &s,vector<vector<int>> &h)
 {
-    s=" "+s;
-    int len=s.length();
-    has[0]=0;
-    for(int i=1;i<=len;++i)
-        has[i]=(has[i-1]*base+s[i]-'a'+1)%mod;
+    h.resize(modnum);
+    for(int j=0;j<modnum;++j)
+    {
+        h[j].resize(s.size()+1);
+        h[j][0]=0;
+        for(int i=0;i<s.size();++i)
+            h[j][i+1]=(h[j][i]*base+s[i]-'a'+1)%mod[j];
+    }
 }
-ull getSectionHash(int l,int r)
+array<ull,modnum> subHash(vector<vector<int>> &h,int l,int r)
 {
-    return (has[r]-has[l-1]*power[r-l+1]%mod)%mod;
+    array<ull,modnum> res;
+    for(int i=0;i<modnum;++i)
+        res[i]=(h[i][r]+mod[i]-h[i][l-1]*pw[i][r-l+1]%mod[i])%mod[i];
+    return res;
 }
 ```
 ## 判断回文串
 原哈希值和reverse哈希值一样
 ```cpp
-ull rev[N];
-void Hash(string s)
+void initHash(string &s,vector<vector<int>> &rev)
 {
-    ...
-    has[0]=0;
-    rev[0]=0;
-    for(int i=1;i<=len;++i)
+    rev.resize(modnum);
+    for(int j=0;j<modnum;++j)
     {
-        has[i]=(has[i-1]*base+s[i]-'a'+1)%mod;
-        rev[i]=(rev[i-1]*base+s[len+1-i]-'a'+1)%mod;
+        rev[j].resize(s.size()+1);
+        rev[j][0]=0;
+        for(int i=0;i<s.size();++i)
+            rev[j][i+1]=(rev[j][i]*base+s[s.size()-1-i]-'a'+1)%mod[j];
     }
 }
-ull getRevSectionHash(int l,int r)
+array<ull,modnum> subHash(vector<vector<int>> &rev,int l,int r)
 {
-    return (rev[n-l+1]-has[n-r]*power[r-l+1]%mod)%mod;
+    array<ull,modnum> res;
+    for(int i=0;i<modnum;++i)
+        res[i]=(rev[i][rev[0].size()-l]+mod[i]-rev[i][rev[0].size()-1-r]*pw[i][r-l+1]%mod[i])%mod[i];
+    return res;
 }
 ```
